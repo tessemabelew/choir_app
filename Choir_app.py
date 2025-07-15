@@ -3137,6 +3137,7 @@ https://www.youtube.com/watch?v=brlNYcQk5So
 # Create a title list for the dropdown
     song_titles = [song["title"] for song in songs]
     selected_title = st.selectbox("Select a song", song_titles)
+    st.markdown(f"## {selected_title}")
 
     # Find selected song and display lyrics
     selected_song = next(song for song in songs if song["title"] == selected_title)
@@ -3161,9 +3162,9 @@ elif choice == "Files":
 elif choice == "Announcements":
     st.title("📢 ማስታወቂያ")
     announcements = [
-        "🎤 Solo practice this Friday at 5PM.",
-        "🚌 Transport arrangements for the outreach event are finalized.",
-        "🎉 Choir celebration dinner on July 21st after service."
+        "🎤 የልምምድ ጊዜ በየሳምንቱ ሐሙስ ከምሽቱ 7:00 እስከ 11:00",
+        "🚌 አገልግሎት እሁድ August 10, 2025 ",
+        "🎉 ከአገልግሎት በኋላ የህብረትና የምሳ ጊዜ በመሲ ዳላስ ቤት"
     ]
     for note in announcements:
         st.success(note)
