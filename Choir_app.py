@@ -16,7 +16,7 @@ if choice == "Introduction":
         unsafe_allow_html=True
     )
 
-    st.image("C:/Users/tesse/choir_app/winde1.jpg", width=600)
+    st.image("winde1.jpg", width=600)
     st.markdown("""
         #### Quick Info
         - Choir practice every Thrusday at 7PM
@@ -27,7 +27,7 @@ if choice == "Introduction":
         
 elif choice == "Gallery":
     st.title("📸 Choir Gallery")
-    st.image("C:/Users/tesse/choir_app/choir_atwondie.jpg", caption="At Wondie mels", use_container_width=True)
+    st.image("choir_atwondie.jpg", caption="At Wondie mels", use_container_width=True)
 
 elif choice == "Calendar":
     st.title("🗓 Choir Calendar")
