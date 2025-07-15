@@ -3136,7 +3136,7 @@ https://www.youtube.com/watch?v=brlNYcQk5So
 
 # Create a title list for the dropdown
     song_titles = [song["title"] for song in songs]
-    selected_title = st.selectbox("Select a song", song_titles)
+    selected_title = st.selectbox("Select a song", song_titles, key="menu_select")
 
     # Find selected song and display lyrics
     selected_song = next(song for song in songs if song["title"] == selected_title)
@@ -3146,8 +3146,17 @@ https://www.youtube.com/watch?v=brlNYcQk5So
 elif choice == "Files":
     st.title("📂 Choir Files")
     st.markdown("Download important choir documents:")
-    st.download_button("Download Choir bylaw", "Bylaw content here", file_name="IEECChoirbylaw.docx")
-    st.download_button("Download song mater", "song master content here", file_name="Songs_master.pdf")
+
+    # For Word file
+    with open("IEECChoirbylaw.docx", "rb") as docx_file:
+        docx_bytes = docx_file.read()
+        st.download_button("Download Choir bylaw", docx_bytes, file_name="IEECChoirbylaw.docx")
+
+    # For PDF file
+    with open("Songs_master.pdf", "rb") as pdf_file:
+        pdf_bytes = pdf_file.read()
+        st.download_button("Download song master", pdf_bytes, file_name="Songs_master.pdf")
+
 
 elif choice == "Announcements":
     st.title("📢 ማስታወቂያ")
