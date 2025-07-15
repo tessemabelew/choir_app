@@ -1,6 +1,25 @@
 # streamlit_app.py
 import streamlit as st
 
+# Hide Streamlit style elements (menu, footer, GitHub icon, etc.)
+st.markdown("""
+    <style>
+    /* Hide the menu */
+    #MainMenu {visibility: hidden;}
+
+    /* Hide the footer */
+    footer {visibility: hidden;}
+
+    /* Hide the GitHub corner icon */
+    .css-eczf16 {display: none;}
+
+    /* Optional: Remove top padding for a tighter layout */
+    .block-container {
+        padding-top: 1rem;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
 st.set_page_config(page_title="Choir App", layout="wide")
 
 # Top menu bar with buttons aligned right
@@ -3135,6 +3154,7 @@ https://www.youtube.com/watch?v=brlNYcQk5So
 ]
 
 # Create a title list for the dropdown
+    
     song_titles = [song["title"] for song in songs]
     selected_title = st.selectbox("Select a song", song_titles)
     st.markdown(f"## {selected_title}")
