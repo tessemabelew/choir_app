@@ -1,46 +1,7 @@
-# streamlit_app.py
-import streamlit as st
 
-st.set_page_config(page_title="Choir App", layout="wide")
 
-# Top menu bar with buttons aligned right
-col1, col2, col3 = st.columns([5, 1, 3])
-with col3:
-    menu = ["Introduction","Gallery", "Calendar", "Lyrics", "Files", "Announcements"]
-    choice = st.selectbox("Navigate", menu, key="menu_select")
-
-if choice == "Introduction":
-
-    st.markdown(
-        "<h1 style='font-size:20px;'>🎶 የአለም አቀፍ የኢትዮጵያ ወንጌላዊት ቤተ ክርስቲያን ሀ መዘምራን መተግበሪያ</h1>",
-        unsafe_allow_html=True
-    )
-
-    st.image("C:/Users/tesse/choir_app/winde1.jpg", width=600)
-    st.markdown("""
-        #### Quick Info
-        - Choir practice every Thrusday at 7PM
-        - Sunday Service: 9:00AM
-        - Contact: tessemabelew@gmail.com
-        """)
-    
-        
-elif choice == "Gallery":
-    st.title("📸 Choir Gallery")
-    st.image("C:/Users/tesse/choir_app/choir_atwondie.jpg", caption="At Wondie mels", use_container_width=True)
-
-elif choice == "Calendar":
-    st.title("🗓 Choir Calendar")
-    st.markdown("""
-    **Upcoming Events:**
-    - **July 10**: Practice session
-    - **August 10**: Community outreach performance
-    - **July 20**: Sunday Choir Lead
-    """)
-
-elif choice == "Lyrics":
-    st.title("🎵 Song Lyrics")
-    songs = [
+# Embedded song lyrics
+songs = [
     {
         "title": "1.በረከትና ጥበብ ምስጋና",
         "lyrics": """
@@ -71,7 +32,7 @@ elif choice == "Lyrics":
 	ለታረደው በግ ለኢየሱስ ምስጋና፣ 
 	አሁንም /2/ ይድረሰዉ ምስጋና እንደገና፡፡
 
-AV : https://www.youtube.com/watch?v=xHgXstA8d0g
+ AV: https://www.youtube.com/watch?v=xHgXstA8d0g
 """
     },
     {
@@ -3134,29 +3095,5 @@ https://www.youtube.com/watch?v=brlNYcQk5So
     }
 ]
 
-# Create a title list for the dropdown
-    song_titles = [song["title"] for song in songs]
-    selected_title = st.selectbox("Select a song", song_titles)
-
-    # Find selected song and display lyrics
-    selected_song = next(song for song in songs if song["title"] == selected_title)
-    #st.text_area("Lyrics", selected_song["lyrics"], height=500)
-    st.text(selected_song["lyrics"])
-
-elif choice == "Files":
-    st.title("📂 Choir Files")
-    st.markdown("Download important choir documents:")
-    st.download_button("Download Choir bylaw", "Bylaw content here", file_name="IEECChoirbylaw.docx")
-    st.download_button("Download song mater", "song master content here", file_name="Songs_master.pdf")
-
-elif choice == "Announcements":
-    st.title("📢 ማስታወቂያ")
-    announcements = [
-        "🎤 Solo practice this Friday at 5PM.",
-        "🚌 Transport arrangements for the outreach event are finalized.",
-        "🎉 Choir celebration dinner on July 21st after service."
-    ]
-    for note in announcements:
-        st.success(note)
 
 
