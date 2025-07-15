@@ -3136,7 +3136,7 @@ https://www.youtube.com/watch?v=brlNYcQk5So
 
 # Create a title list for the dropdown
     song_titles = [song["title"] for song in songs]
-    selected_title = st.selectbox("Select a song", song_titles, key="menu_select")
+    selected_title = st.selectbox("Select a song", song_titles)
 
     # Find selected song and display lyrics
     selected_song = next(song for song in songs if song["title"] == selected_title)
