@@ -49,7 +49,7 @@ elif choice == "Gallery":
     st.image("choir_atwondie.jpg", caption="ወንዴ መልስ ላይ", use_container_width=True)
     st.image("winde1.jpg", caption="ወንዴ መልስ ላይ", use_container_width=True)
     st.image("at_TG_house.jpg", caption="ቲጂ ቤት", use_container_width=True)
-    st.image("zebi_sonwed.jpg", caption="የዘቢ ልጅ ሰርግ ላይ", use_container_width=True)
+    st.image("zebi_son_wed.jpg", caption="የዘቢ ልጅ ሰርግ ላይ", use_container_width=True)
     st.image("Sis_dough_wed.jpg", caption="የሲሱ ልጅ ሰርግ ላይ", use_container_width=True)
     st.image("sisu_douter_mels.jpg", caption="የሲሱ ልጅ መልስ ላይ", use_container_width=True)
 
