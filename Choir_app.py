@@ -39,7 +39,7 @@ if choice == "Introduction":
     
     st.markdown(
         "<h1 style='font-size:20px;'>🎶 የአለም አቀፍ የኢትዮጵያ ወንጌላዊት ቤተ ክርስቲያን ሀ መዘምራን መተግበሪያ</h1>",
-        hide_streamlit_style,unsafe_allow_html=True
+        unsafe_allow_html=True
     )
 
     st.image("Choir_main.jpg", width=600)
