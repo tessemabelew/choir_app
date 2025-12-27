@@ -66,6 +66,29 @@ if choice == "Introduction":
         - Sunday Service: 9:00AM
         - Contact: tessemabelew@gmail.com
         """)
+    st.markdown("""
+        <style>
+        /* Hide main menu (⋮) */
+        [data-testid="stMainMenu"] {
+            visibility: hidden;
+        }
+        
+        /* Hide footer */
+        footer {
+            visibility: hidden;
+        }
+        
+        /* Hide header */
+        [data-testid="stHeader"] {
+            visibility: hidden;
+        }
+        
+        /* Remove top padding */
+        .block-container {
+            padding-top: 1rem;
+        }
+        </style>
+        """, unsafe_allow_html=True)
     
         
 elif choice == "Gallery":
