@@ -22,15 +22,29 @@ st.markdown("""
 
 st.set_page_config(page_title="Choir App", layout="wide", initial_sidebar_state="collapsed")
 
-hide_streamlit_style = """
+st.markdown("""
 <style>
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-header {visibility: hidden;}
-</style>
-"""
+/* Hide main menu (⋮) */
+[data-testid="stMainMenu"] {
+    visibility: hidden;
+}
 
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+/* Hide footer */
+footer {
+    visibility: hidden;
+}
+
+/* Hide header */
+[data-testid="stHeader"] {
+    visibility: hidden;
+}
+
+/* Remove top padding */
+.block-container {
+    padding-top: 1rem;
+}
+</style>
+""", unsafe_allow_html=True)
 
 # Top menu bar with buttons aligned right
 col1, col2, col3 = st.columns([5, 1, 3])
