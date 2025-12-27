@@ -52,6 +52,7 @@ elif choice == "Gallery":
     st.image("zebi_son_wed.jpg", caption="የዘቢ ልጅ ሰርግ ላይ", use_container_width=True)
     st.image("Sis_dough_wed.jpg", caption="የሲሱ ልጅ ሰርግ ላይ", use_container_width=True)
     st.image("sisu_douter_mels.jpg", caption="የሲሱ ልጅ መልስ ላይ", use_container_width=True)
+    st.image("After Sunday Service out side restaurant.jpg", caption="After Sunday Service out side restaurant", use_container_width=True)
 
 elif choice == "Calendar":
     st.title("🗓 Choir Calendar")
