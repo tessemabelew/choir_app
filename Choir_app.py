@@ -21,6 +21,13 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 st.set_page_config(page_title="Choir App", layout="wide", initial_sidebar_state="collapsed")
+hide_streamlit_style = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+</style>
+"""
 
 # Top menu bar with buttons aligned right
 col1, col2, col3 = st.columns([5, 1, 3])
@@ -29,13 +36,7 @@ with col3:
     choice = st.selectbox("Navigate", menu, key="menu_select")
 
 if choice == "Introduction":
-    hide_streamlit_style = """
-      <style>
-      #MainMenu {visibility: hidden;}
-      footer {visibility: hidden;}
-      header {visibility: hidden;}
-      </style>
-"""
+    
     st.markdown(hide_streamlit_style,
         "<h1 style='font-size:20px;'>🎶 የአለም አቀፍ የኢትዮጵያ ወንጌላዊት ቤተ ክርስቲያን ሀ መዘምራን መተግበሪያ</h1>",
         unsafe_allow_html=True
